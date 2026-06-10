@@ -1,6 +1,6 @@
 {
   "schema_version": "deepsearchbenchmark/site-data/v3",
-  "generated_at": "2026-06-10T03:15:35Z",
+  "generated_at": "2026-06-10T05:39:22Z",
   "name": "DeepSearchBenchmark",
   "tagline": "Measuring web-search agents on original, long-horizon research tasks",
   "description": "A harness-agnostic benchmark for live web-search agents across multi-hop research, recall crawling, official portals, PDFs and technical data.",
@@ -60,14 +60,14 @@
       "model": "MiniMax-M3",
       "runtime": "ctox",
       "status": "running",
-      "tasks_done": 15,
+      "tasks_done": 20,
       "tasks_total": 100,
-      "contract_strict_rate": 0.8,
-      "contract_invalid_rate": 0.0667,
-      "median_task_min": 16.05,
-      "sources_median": 7,
-      "tokens_median": 1649.0,
-      "notes": "Mid-run: 15/100 tasks collected so far. Token telemetry present on 14/15 results. 1 invalid result(s) (broken contract or empty answer)."
+      "contract_strict_rate": 0.75,
+      "contract_invalid_rate": 0.05,
+      "median_task_min": 20.7,
+      "sources_median": 7.0,
+      "tokens_median": 1742,
+      "notes": "Mid-run: 20/100 tasks collected so far. Token telemetry present on 19/20 results. 1 invalid result(s) (broken contract or empty answer)."
     }
   ],
   "categories": [
@@ -1446,7 +1446,16 @@
           "updated_at": "2026-06-09T14:29:58Z"
         },
         "ctox-minimax-m3": {
-          "status": "missing"
+          "status": "ok",
+          "contract": "recoverable",
+          "elapsed_s": 1708.0,
+          "source_count": 0,
+          "tokens": 486,
+          "answer_preview": "The file is complete and well-structured. Let me provide a final summary. The research is complete. The final answer (saved to `/Users/michaelwelsch/Documents/deepSearchBenchmark/tasks/nt15_uniper_renationalisation_stake_chain/nt15_final.json`) documents: **Key finding — entry premise refuted:** The",
+          "answer_full": "The file is complete and well-structured. Let me provide a final summary.\n\nThe research is complete. The final answer (saved to `/Users/michaelwelsch/Documents/deepSearchBenchmark/tasks/nt15_uniper_renationalisation_stake_chain/nt15_final.json`) documents:\n\n**Key finding — entry premise refuted:** The task's claim that \"Uniper today again majority-owned by Fortum\" is **false**. Fortum was completely bought out in December 2022 (its stake dropped to 0%); the German federal government (Bundesrepublik Deutschland) became the controlling owner with ~99.12%, and the re-privatisation process was launched on 19 May 2026 (offers due 12 June 2026). Fortum has not been an owner since December 2022.\n\n**Ownership chain (correctly ordered):**\n1. E.ON spin-off (2016) — Uniper SE separated from E.ON, IPO 12.09.2016, E.ON retained 47%\n2. Fortum majority (2017–2020) — Nov 2017 offer, Jan 2018 E.ON tender, +20.5% from Elliott/Knight Vinke, peak ~78% in July 2022\n3. German federal government nationalisation (2022) — Stabilisation 8 July 2022, 99.12% via UBG Uniper Beteiligungsholding GmbH\n4. EU condition — Federal stake must fall to ≤25% + 1 share by end 2028\n5. Current (10.06.2026): Bund still controls 99.12%, re-privatisation announced 19 May 2026\n\n**Sources used (4 independent primary/secondary):**\n- de.wikipedia.org/wiki/Uniper and /E.ON (history)\n- tagesschau.de (19.05.2026, federal stake confirmation)\n- handelsblatt.com (19.05.2026, EU condition)\n- wa.de (21.05.2026, federal sale process)\n\n**Limitations honestly documented:** uniper.energy IR was Cloudflare-blocked; EU competition-policy and EUR-Lex portals were behind bot protection; the federal BMWK/BMWE press release was behind Radware bot mitigation. The official EU December 2022 state-aid decision is therefore cited via three independent German media sources and Wikipedia rather than directly from the EU register, which is flagged in `side_work[0].status = partial`.",
+          "source_urls": [],
+          "failure_mode": null,
+          "updated_at": "2026-06-10T03:41:57Z"
         }
       }
     },
@@ -1514,7 +1523,16 @@
           "updated_at": "2026-06-09T14:32:02Z"
         },
         "ctox-minimax-m3": {
-          "status": "missing"
+          "status": "ok",
+          "contract": "recoverable",
+          "elapsed_s": 2397.0,
+          "source_count": 0,
+          "tokens": 303,
+          "answer_preview": "Hier die Recherche-Zusammenfassung: **Kern-Antwort:** - **Preis:** Deutscher Zukunftspreis 2025 (29. Verleihung), 19. November 2025, Berlin - **Gewinner-Team:** Christoffer Uhr, Kai Weeber, Pierre Andrieu - **Arbeitgeber:** Robert Bosch GmbH, Stuttgart - **Prämierte Technologie:** Wasserstoff-Brenns",
+          "answer_full": "Hier die Recherche-Zusammenfassung:\n\n**Kern-Antwort:**\n- **Preis:** Deutscher Zukunftspreis 2025 (29. Verleihung), 19. November 2025, Berlin\n- **Gewinner-Team:** Christoffer Uhr, Kai Weeber, Pierre Andrieu\n- **Arbeitgeber:** Robert Bosch GmbH, Stuttgart\n- **Prämierte Technologie:** Wasserstoff-Brennstoffzellen-Antrieb (Fuel-Cell-Power-Modul) für schwere Lkw → **Bosch Mobility (Unternehmensbereich Mobility)**\n- **Umsatz Mobility-Geschäftsbereich, zuletzt offiziell berichtet (Geschäftsjahr 2025):** **55,8 Mrd EUR** (nominal +0,1 %, wechselkursbereinigt +2,9 %; Anteil 61,4 % am Bosch-Gruppenumsatz von 91,0 Mrd EUR — **nicht** zu verwechseln mit dem Bosch-Gruppenumsatz oder mit Industrial Technology 6,5 Mrd EUR)\n- **Quelle:** Bosch-Pressemitteilung „Jahrespressekonferenz 2026\" vom **16.04.2026** sowie Bosch-Geschäftsbericht 2025 (Robert Bosch GmbH)\n\nAlle vier Hops sind durch unabhängige Primärquellen abgedeckt (Bundespräsidialamt, Bosch-Presse, Bosch-Mobility-Website, Bosch-Geschäftsbericht-PDF), das Veröffentlichungsdatum ist doppelt verifiziert (publicnow.com-Spiegel + Bildpfade in der Pressemitteilung), und die Mobilty-Umsatzangabe ist in drei voneinander unabhängigen Bosch-Quellen konsistent.",
+          "source_urls": [],
+          "failure_mode": null,
+          "updated_at": "2026-06-10T04:21:56Z"
         }
       }
     },
@@ -1584,7 +1602,23 @@
           "updated_at": "2026-06-09T14:35:01Z"
         },
         "ctox-minimax-m3": {
-          "status": "missing"
+          "status": "ok",
+          "contract": "strict",
+          "elapsed_s": 1487.0,
+          "source_count": 6,
+          "tokens": 1840,
+          "answer_preview": "Käufer: BioNTech SE (Societas Europaea, deutsche Rechtsform), Sitz: Mainz, Deutschland (An der Goldgrube 12, D-55131 Mainz; HRB 48720 Amtsgericht Mainz; Nasdaq: BNTX, American Depositary Shares). Zielunternehmen: CureVac N.V. (Naamloze Vennootschap, niederländische Rechtsform), eingetragen in den Ni",
+          "answer_full": "Käufer: BioNTech SE (Societas Europaea, deutsche Rechtsform), Sitz: Mainz, Deutschland (An der Goldgrube 12, D-55131 Mainz; HRB 48720 Amtsgericht Mainz; Nasdaq: BNTX, American Depositary Shares). Zielunternehmen: CureVac N.V. (Naamloze Vennootschap, niederländische Rechtsform), eingetragen in den Niederlanden (Niederlande Handelsregister KvK 77798031, RSIN 861149336) mit Hauptverwaltung in Tübingen, Deutschland (Friedrich-Miescher-Straße 15, 72076 Tübingen; Nasdaq: CVAC; operative Tochtergesellschaft CureVac SE, ehemals CureVac AG). Großaktionär des Zielunternehmens, der die Transaktion unterstützt: dievini Hopp BioTech holding GmbH & Co. KG und verbundene Parteien (nach 20-F FY 2024 von CureVac ca. 37 % der Stimmrechte; im Angebot vom 12.06.2025 als 'CureVac's major shareholder' genannt, mit Tender- und Support-Vereinbarung). Zuletzt offiziell berichteter Jahresumsatz des Käufers: EUR 2.869,9 Mio (Geschäftsjahr 2025, endend 31.12.2025; Quelle: BioNTech SE Form 20-F für das am 31. Dezember 2025 endende Geschäftsjahr, eingereicht bei der SEC am 10. März 2026; Veröffentlichungsdatum der 20-F: 10.03.2026). Im Angebot genannte ungefähre Gegenleistung je Anteil: ca. USD 5,46 je CureVac-Aktie in BioNTech American Depositary Shares (ADSs) (vorbehaltlich Collar-Mechanismus 0,04318 ADSs bei VWAP > USD 126,55 bzw. 0,06476 ADSs bei VWAP < USD 84,37; Prämie 55 % gegenüber 3-Monats-VWAP von USD 3,53 zum 11.06.2025). Ungefährer Gesamttransaktionswert: ca. USD 1,25 Mrd implizierter Eigenkapitalwert (implied aggregate equity value). Stand bezogen auf heutigen Tag (10.06.2026): Transaktion wurde am 02.12.2025 abgeschlossen (Closing) bzw. Endergebnis des öffentlichen Umtauschangebots am 03.12.2025 veröffentlicht; CureVac ist damit 100-%ige Tochtergesellschaft von BioNTech.",
+          "source_urls": [
+            "https://www.biontech.com/us/en/home/mediaroom/news/press-releases/2025/06/biontech-announces-strategic-transaction-acquire-curevac-public.html",
+            "https://www.sec.gov/Archives/edgar/data/1776985/000119312525139910/d40967dex991.htm",
+            "https://www.sec.gov/Archives/edgar/data/1809122/000110465925058873/tm2517876d1_ex99-1.htm",
+            "https://www.sec.gov/Archives/edgar/data/1776985/000177698526000017/bntx-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1809122/000141057825000692/cvac-20241231x20f.htm",
+            "https://www.biontech.com/content/dam/corporate/pdf/vision-and-mission/BNTX-Annual-Report-2024.pdf"
+          ],
+          "failure_mode": null,
+          "updated_at": "2026-06-10T04:46:44Z"
         }
       }
     },
@@ -1657,7 +1691,32 @@
           "updated_at": "2026-06-09T14:36:04Z"
         },
         "ctox-minimax-m3": {
-          "status": "missing"
+          "status": "ok",
+          "contract": "strict",
+          "elapsed_s": 1360.0,
+          "source_count": 15,
+          "tokens": 2200,
+          "answer_preview": "Im Sommer 2025 (12./13. August 2025, 02:37 CEST) startete eine Ariane 62 (Ariane 6 in der Zwei-Booster-Konfiguration, Flug VA264, dritter Flug und zweiter kommerzieller Flug der neuen europäischen Schwerlastrakete) vom europäischen Weltraumbahnhof Guiana Space Centre in Kourou (Französisch-Guayana) ",
+          "answer_full": "Im Sommer 2025 (12./13. August 2025, 02:37 CEST) startete eine Ariane 62 (Ariane 6 in der Zwei-Booster-Konfiguration, Flug VA264, dritter Flug und zweiter kommerzieller Flug der neuen europäischen Schwerlastrakete) vom europäischen Weltraumbahnhof Guiana Space Centre in Kourou (Französisch-Guayana) und brachte Metop-SGA1 (MetOp Second Generation A1, auch Metop-SGA1; gleichzeitig Copernicus Sentinel-5A) in einen sonnensynchronen Orbit in ca. 800–848 km Höhe. Hauptauftragnehmer (Builder/Prime Contractor): Airbus Defence and Space (Toulouse); im Auftrag der Raumfahrtagentur ESA (European Space Agency), die Metop-SGA1 für EUMETSAT entwickelt und beschafft hat; betreibende europäische Organisation: EUMETSAT (European Organisation for the Exploitation of Meteorological Satellites), mit Sitz in Darmstadt, Deutschland (Eumetsat Allee 1, D-64295 Darmstadt). Das mitgeführte Instrument des EU-Erdbeobachtungsprogramms Copernicus ist Copernicus Sentinel-5 (UVNS-Sounder). Offiziell belegte Kennzahl der betreibenden Organisation: 30 Mitgliedstaaten, dokumentiert auf der EUMETSAT-Seite 'Who we are' (letzte Aktualisierung 24. Februar 2026). Geplante Metop-SG-Konstellation: drei aufeinanderfolgende Paare von Metop-SGA- und Metop-SGB-Satelliten, also insgesamt 6 Satelliten (Metop-SGA1 bereits gestartet am 13.08.2025; Metop-SGB1 geplant Juni–August 2026; A2/B2 ab 2032/2033; A3/B3 ab 2039/2040). Betriebsstatus zum heutigen Stand (10.06.2026): Metop-SGA1 ist seit 18.08.2025 unter EUMETSAT-Kontrolle; die Kommissionierungsphase lief laut EUMETSAT-Programmseite (Stand 06.03.2026) noch; am 05.05.2026 wurde das erste Instrument (Radio Occultation Sounder / RO) offiziell in den operativen Betrieb übernommen, weitere Instrumente (u.a. IASI-NG, MWS) befinden sich in der Kalibrierungs-/Validierungsphase mit Aufnahme der vollen operationellen Datenverteilung im Jahr 2026.",
+          "source_urls": [
+            "https://www.eumetsat.int/successful-launch-metop-sga1-take-weather-forecasting-new-heights",
+            "https://www.eumetsat.int/eumetsat-assumes-control-inaugural-metop-second-generation-satellite",
+            "https://www.eumetsat.int/revolutionary-metop-sga1-already-transmitting-instrument-data",
+            "https://www.eumetsat.int/iasi-ng-instrument-metop-sga1-satellite-sends-back-first-data",
+            "https://www.eumetsat.int/who-we-are",
+            "https://www.eumetsat.int/our-satellites/metop-series",
+            "https://www.eumetsat.int/metop-second-generation",
+            "https://www.eumetsat.int/metop-second-generation-a1-and-copernicus-sentinel-5",
+            "https://www.eumetsat.int/news/latest-news",
+            "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-5",
+            "https://cnes.fr/en/events/launch-third-ariane-6-rocket-carrying-metop-sga1-satellite-va264",
+            "https://all-andorra.com/with-ariane-6-arianespace-successfully-launches-metop-sga1-satellite/",
+            "https://en.wikipedia.org/wiki/MetOp-SG_A1/Sentinel-5A",
+            "https://spacelaunchnow.me/launch/ariane-62-metop-sg-a1/",
+            "https://www.indiastrategic.in/airbus-built-metop-sg-weather-and-climate-satellite-shipped-to-kourou/"
+          ],
+          "failure_mode": null,
+          "updated_at": "2026-06-10T05:09:25Z"
         }
       }
     },
@@ -1730,7 +1789,26 @@
           "updated_at": "2026-06-09T14:37:07Z"
         },
         "ctox-minimax-m3": {
-          "status": "missing"
+          "status": "ok",
+          "contract": "strict",
+          "elapsed_s": 1563.0,
+          "source_count": 9,
+          "tokens": 2159,
+          "answer_preview": "Nein, fuer das laufende Jahr (2026) trifft das nicht mehr zu. Linde ist heute kein an der Frankfurter Wertpapierboerse notiertes deutsches DAX-Unternehmen mehr. Kette der Umwandlung: (1) 1879 grundete Carl von Linde in Wiesbaden die 'Gesellschaft fuer Linde's Eismaschinen' (spaeter Linde AG), die ue",
+          "answer_full": "Nein, fuer das laufende Jahr (2026) trifft das nicht mehr zu. Linde ist heute kein an der Frankfurter Wertpapierboerse notiertes deutsches DAX-Unternehmen mehr. Kette der Umwandlung: (1) 1879 grundete Carl von Linde in Wiesbaden die 'Gesellschaft fuer Linde's Eismaschinen' (spaeter Linde AG), die ueber 1907 (Linde Air Products, USA), die 1992-Abspaltung Praxair (USA), 2006 (Linde AG uebernimmt BOC, The Linde Group) zur Frankfurter DAX-notierten Linde AG wurde. (2) Effective 31. Oktober 2018 wurde der all-stock 'Merger of Equals' zwischen Linde AG und Praxair, Inc. unter der neu geguerteten, in IRLAND eingetragenen Holding LINDE PLC vollzogen (SEC 10-K FY 2018). Die Aktie war ab dann DUAL-gelistet an der New York Stock Exchange (NYSE) und der Frankfurter Wertpapierboerse (FSE), Ticker LIN. (3) Am 18. Januar 2023 stimmten die Aktionaere auf der Court Meeting und EGM dem Scheme of Arrangement zu (SEC 8-K vom 23.01.2023: ~93,6 % Ja-Stimmen); am 1. Maerz 2023 wurde das Delisting von der Frankfurter Wertpapierboerse (FSE) abgeschlossen (SEC 10-K Note 14, FY 2022/FY 2024: 'delisting of old Linde plc from the New York Stock Exchange (NYSE) and the Frankfurt Stock Exchange (FSE), and the subsequent relisting of new Linde plc to the NYSE'). Mit dem FSE-Delisting endete auch die DAX-Zugehoerigkeit. (4) Effective 7. November 2023 verlegte Linde die US-Notierung von der NYSE an die NASDAQ (SEC 10-K FY 2023: 'From January 1, 2023 through November 6, 2023, Linde's shares were traded on the NYSE, but effective November 7, 2023, Linde delisted its shares from the NYSE and began listing and trading its shares on the Nasdaq'). Stand 10.06.2026: Die Aktie wird AUSSCHLIESSLICH an der NASDAQ unter dem Ticker LIN gehandelt (ISIN IE000S9YS762, Nasdaq-100- und S&P-500-Konstituente, ~463,4 Mio. ausstehende Stammaktien per 31.01.2026 laut 10-K FY 2025). Die Gesellschaft ist in IRLAND als public limited company eingetragen, mit eingetragenem Sitz Ten Earlsfort Terrace, Dublin 2, und Principal Executive Offices in Woking, Surrey (UK) und 10 Riverview Drive, Danbury, Connecticut (US). Es besteht KEINE Frankfurter Notierung und KEINE DAX-Mitgliedschaft mehr.",
+          "source_urls": [
+            "https://www.linde.com/about-linde",
+            "https://www.sec.gov/Archives/edgar/data/1707925/000162828019003050/plc201810-k.htm",
+            "https://www.sec.gov/Archives/edgar/data/1707925/000162828022004180/lin-20221231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1707925/000119312523012820/d438647d8k.htm",
+            "https://www.sec.gov/Archives/edgar/data/1707925/000162828024007424/lin-20231231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1707925/000162828025007990/lin-20241231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm",
+            "https://assets.linde.com/-/media/global/corporate/corporate/documents/press-releases/2025/linde-4q25-earnings-release-tables.pdf",
+            "https://en.wikipedia.org/wiki/Linde_plc"
+          ],
+          "failure_mode": null,
+          "updated_at": "2026-06-10T05:35:29Z"
         }
       }
     },
