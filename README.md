@@ -2,18 +2,19 @@
 
 Live dashboard of **DeepSearchBenchmark**, a harness-agnostic arena benchmark for
 live-web deep research: the 100 tasks are fixed, the **harness** varies
-(AGY / Gemini 3.5 Flash, MiniMax CLI / MiniMax-M3, Claude Code / Opus 4.8,
+(Google Antigravity CLI / Gemini 3.5 Flash, MiniMax CLI / MiniMax-M3, Claude Code / Opus 4.8,
 CTOX / MiniMax-M3). All harnesses work the same tasks in collect-only mode;
-quality is ranked afterwards by ONE external agentic LLM judge (anonymized,
-relative, two swap passes, Bradley-Terry → Elo with bootstrap CIs).
+quality is ranked afterwards by a pure-prompt artifact judge (Claude Opus,
+anonymized candidates, two swap passes, NO web access and NO tools — it ranks
+the submitted evidence chains only; prompt-tournament winner across 4 variants).
+Pairwise verdicts feed Bradley-Terry → Elo with bootstrap CIs.
 
-**Current status: collection phase.** The dashboard shows collection telemetry
+**Current status: judge v2 preview (27/100 tasks judged).** The dashboard shows collection telemetry
 (contract rates, timings, sources) — *not* a quality ranking. Elo ±CI,
 head-to-head matrix and per-dimension scores appear after the judge run.
 
 - Dashboard: open `index.html` (or the GitHub Pages deployment)
-- Judge design: [docs/judge-agentic-v1.md](docs/judge-agentic-v1.md)
-- Judge prompt, published verbatim: [scripts/judge_prompt_v1.md](scripts/judge_prompt_v1.md)
+- Judge prompt, published verbatim: [scripts/judge_prompt_v2.md](scripts/judge_prompt_v2.md)
 - Methodology: [docs/methodology.md](docs/methodology.md)
 
 The task corpus, engine and judge reference materials live in a **private**
