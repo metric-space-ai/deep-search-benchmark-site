@@ -24,12 +24,17 @@ honesty about failed sources), not a single fixed model.
 
 | Harness | Model |
 |---|---|
-| MiniMax CLI | MiniMax-M3 |
-| Google Antigravity CLI | Gemini 3.5 Flash (High) |
-| Claude Code | Opus 4.8 |
+| CTOX | MiniMax-M3 |
 | OpenAI Codex CLI | GPT-5.5 |
 | opencode | MiniMax-M3 |
-| CTOX | MiniMax-M3 |
+| MiniMax Agent (Mini-Agent) | MiniMax-M3 |
+| Claude Code | Opus 4.8 |
+| Google Antigravity CLI | Gemini 3.5 Flash (High) |
+
+All six are **real autonomous agent CLIs** driven headlessly with the same task and
+the same I/O contract. Three of them run the same model (MiniMax-M3) inside different
+agent harnesses — CTOX, opencode, and the official [MiniMax Mini-Agent](https://github.com/MiniMax-AI/Mini-Agent)
+loop — which isolates the *harness* as the variable.
 
 ## How quality is judged
 
